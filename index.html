@@ -319,6 +319,60 @@
     .service-card--addons { background:var(--ivory); }
     .service-card--addons:hover { background:var(--cream); }
 
+    /* ═══════════════════════════════════════════════
+       PROMOTIONS
+    ══════════════════════════════════════════════ */
+    .promotions-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+      gap: 3rem;
+      margin-top: 3rem;
+    }
+    .promotion-card {
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      border-radius: 4px;
+    }
+    .promotion-header {
+      background: var(--brown);
+      color: var(--white);
+      padding: 3.5rem 2rem 2.5rem;
+      text-align: center;
+    }
+    .promotion-header .label {
+      font-size: 0.65rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      margin-bottom: 0.8rem;
+    }
+    .promotion-header h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2rem, 4vw, 2.8rem);
+      color: var(--white);
+      margin: 0.5rem 0 0;
+      line-height: 1.1;
+    }
+    .promotion-content {
+      background: var(--cream);
+      padding: 2.5rem 2rem;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+    .promo-badge {
+      display: inline-block;
+      background: var(--gold);
+      color: var(--brown);
+      padding: 0.5rem 1.2rem;
+      border-radius: 20px;
+      font-size: 0.7rem;
+      font-weight: 500;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      margin-bottom: 1.5rem;
+      width: fit-content;
+    }
 
     /* ═══════════════════════════════════════════════
        ABOUT
@@ -781,6 +835,49 @@
       </div>
 
       <p style="text-align:center;margin-top:2rem;font-size:0.8rem;color:var(--muted)">All treatments include a personalized consultation, scalp assessment and complimentary access to our self blow-dry styling space. Pricing subject to change. <a href="#contact" style="color:var(--gold);border-bottom:1px solid rgba(201,169,110,0.4)">Contact us</a> with any questions.</p>
+    </div>
+  </section>
+
+  <!-- ═══════════ PROMOTIONS ═══════════ -->
+  <section id="promotions" class="section">
+    <div class="container">
+      <div class="promotions-grid fade-in">
+        <div class="promotion-card">
+          <div class="promotion-header">
+            <div class="label" style="color:var(--gold-lt);letter-spacing:0.15em;">THROUGH JUNE 30</div>
+            <h2 style="font-family:'Cormorant Garamond',serif;font-size:clamp(2.5rem,5vw,3.5rem);font-weight:400;font-style:italic;color:var(--white);margin:0.5rem 0 0;line-height:1.1">Dads &amp; Grads</h2>
+            <p style="font-family:'Cormorant Garamond',serif;font-size:1.2rem;color:var(--gold-lt);font-weight:300;margin-top:0.8rem">Give the ritual they didn't know they needed</p>
+          </div>
+          <div class="promotion-content">
+            <div class="promo-badge">30% OFF ANY RITUAL</div>
+            <p style="font-size:0.95rem;color:var(--brown);line-height:1.7;margin-bottom:1.5rem">June is for celebrating the people who never stop. Give a dad or a grad the gift of rest — a full Liora ritual, 30% off through the end of the month.</p>
+            <ul style="margin:0;padding:0 0 0 1.5rem;color:var(--brown);font-size:0.88rem;line-height:1.8;">
+              <li>30% off any service</li>
+              <li>Simply mention at checkout that you are a dad or a grad and we will honor the discount</li>
+              <li>Valid through June 30, 2026</li>
+            </ul>
+            <p style="text-align:center;margin-top:2rem;font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-style:italic;color:var(--gold)">Book the link in bio</p>
+          </div>
+        </div>
+
+        <div class="promotion-card">
+          <div class="promotion-header">
+            <div class="label" style="color:var(--gold-lt);letter-spacing:0.15em;">BACK BY POPULAR DEMAND</div>
+            <h2 style="font-family:'Cormorant Garamond',serif;font-size:clamp(2.5rem,5vw,3.5rem);font-weight:400;font-style:italic;color:var(--white);margin:0.5rem 0 0;line-height:1.1">The Together Promo</h2>
+            <p style="font-family:'Cormorant Garamond',serif;font-size:1.2rem;color:var(--gold-lt);font-weight:300;margin-top:0.8rem">Some rituals are better shared</p>
+          </div>
+          <div class="promotion-content">
+            <div class="promo-badge">BOGO 50% OFF</div>
+            <p style="font-size:0.95rem;color:var(--brown);line-height:1.7;margin-bottom:1.5rem">You loved it in May, so we're keeping it all summer. Bring the person who carries as much as you do. Rest is better shared.</p>
+            <ul style="margin:0;padding:0 0 0 1.5rem;color:var(--brown);font-size:0.88rem;line-height:1.8;">
+              <li>Book any service for two</li>
+              <li>Second ritual is 50% off</li>
+              <li>Available through July 31, 2026</li>
+            </ul>
+            <p style="text-align:center;margin-top:2rem;font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-style:italic;color:var(--gold)">Book the link in bio</p>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
