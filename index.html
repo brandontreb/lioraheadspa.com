@@ -99,7 +99,8 @@
     #nav:not(.scrolled) .hamburger span { background: var(--brown); }
     .nav-inner {
       display: flex; align-items: center; justify-content: space-between;
-      height: 64px;
+      min-height: 64px;
+      gap: 1.5rem;
     }
     .nav-logo {
       display: flex; align-items: center; gap: 0.6rem;
@@ -113,30 +114,34 @@
       color: var(--brown);
     }
     .nav-links {
-      display: flex; align-items: center; gap: 2.5rem;
+      display: flex; align-items: center; gap: 1.8rem;
       list-style: none;
+      flex-wrap: wrap;
     }
     .nav-links a {
-      font-size: 0.8rem;
+      font-size: 0.75rem;
       font-weight: 500;
-      letter-spacing: 0.12em;
+      letter-spacing: 0.1em;
       text-transform: uppercase;
       color: var(--brown-lt);
       transition: color var(--transition);
+      white-space: nowrap;
     }
     .nav-links a:hover { color: var(--gold); }
     .nav-cta {
       background: var(--gold);
       color: var(--white) !important;
-      padding: 0.55rem 1.4rem;
+      padding: 0.5rem 1.1rem;
       border-radius: var(--r);
       transition: background var(--transition) !important;
+      font-size: 0.7rem;
     }
     .nav-cta:hover { background: var(--gold-dk) !important; color: var(--white) !important; }
     .nav-gift {
       color: var(--gold-dk) !important;
-      padding: 0.55rem 1.4rem;
+      padding: 0.5rem 1.1rem;
       border-radius: var(--r);
+      font-size: 0.7rem;
       border: 1px solid var(--gold);
       transition: background var(--transition), color var(--transition);
     }
