@@ -274,7 +274,7 @@
 
     .services-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(310px, 1fr));
+      grid-template-columns: repeat(auto-fill, minmax(min(310px, 100%), 1fr));
       gap: 1.5px;
       background: var(--border);
       border: 1px solid var(--border);
@@ -329,9 +329,8 @@
     ══════════════════════════════════════════════ */
     .promotions-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(min(380px, 100%), 1fr));
       gap: 3rem;
-      margin-top: 3rem;
     }
     .promotion-card {
       display: flex;
@@ -1080,7 +1079,7 @@
             <h3>How should I book, and what's your cancellation policy?</h3>
             <div class="faq-icon"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M6 1V11M1 6H11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path></svg></div>
           </div>
-          <div class="faq-a"><p>You can book directly through our website, by calling us, or by emailing us. We do not require a deposit at booking. However, cancellations or no-call no-shows within 24 hours of your appointment will be charged a $50 fee. We understand life happens — please just let us know as soon as possible.</p></div>
+          <div class="faq-a"><p>You can book directly through our website, by calling us, or by emailing us. We do not require a deposit at booking. However, cancellations or no-call no-shows within 24 hours of your appointment will be charged a fee of 50% of the service price. We understand life happens — please just let us know as soon as possible.</p></div>
         </div>
 
         <div class="faq-item">
