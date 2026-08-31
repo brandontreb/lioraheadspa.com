@@ -269,6 +269,7 @@
        SERVICES
     ══════════════════════════════════════════════ */
     #services { background: var(--cream); }
+    #promotions { padding-top: 1rem; }
     .section-header { text-align: center; margin-bottom: 4rem; }
     .section-header h2 { font-size: clamp(2.2rem, 4vw, 3.2rem); color: var(--brown); }
 
@@ -376,6 +377,10 @@
       text-transform: uppercase;
       margin-bottom: 1.5rem;
       width: fit-content;
+    }
+    .promotion-card--wide { grid-column: span 2; }
+    @media (max-width: 700px) {
+      .promotion-card--wide { grid-column: span 1; }
     }
 
     /* ═══════════════════════════════════════════════
@@ -687,7 +692,7 @@
 
 
     #membership { background: var(--white); }
-    .membership-grid { display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,460px));gap:1.5rem;max-width:1100px;margin:0 auto;justify-content:center; }
+    .membership-grid { display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,640px));gap:1.5rem;max-width:1100px;margin:0 auto;justify-content:center; }
     .membership-card { background:var(--cream);border:1px solid var(--border);border-radius:4px;padding:2.5rem 2rem;display:flex;flex-direction:column;position:relative; }
     .membership-card--founding { background:var(--brown);border-color:rgba(201,169,110,0.3); }
     .membership-founding-badge { position:absolute;top:-1px;left:50%;transform:translateX(-50%);background:var(--gold);color:var(--white);font-size:.65rem;font-weight:500;letter-spacing:.14em;text-transform:uppercase;padding:.3rem 1.2rem;border-radius:0 0 20px 20px;white-space:nowrap; }
@@ -707,8 +712,7 @@
     .membership-founding-note { font-size:.78rem;color:rgba(255,255,255,0.4);line-height:1.7;margin-bottom:1.5rem;font-style:italic; }
     .membership-btn { display:block;width:100%;text-align:center;margin-top:auto; }
     .membership-closing { text-align:center;font-family:'Cormorant Garamond',serif;font-size:1.15rem;font-style:italic;color:var(--muted);margin-top:3.5rem;max-width:600px;margin-left:auto;margin-right:auto; }
-    @media (max-width:900px) { .membership-grid { grid-template-columns:1fr 1fr; } }
-    @media (max-width:600px) { .membership-grid { grid-template-columns:1fr; } }
+    @media (max-width:700px) { .membership-grid { grid-template-columns:1fr; } }
     /* ─── ANIMATIONS ─────────────────────────────── */
     .fade-in {
       opacity: 1; transform: none;
@@ -818,25 +822,24 @@
       </div>
 
       <div class="services-grid fade-in">
-        <div class="service-card"><div class="label" style="margin-bottom:0.4rem;font-size:0.7rem;">SUMMER SPECIAL</div><h3>Summer Refresh Ritual</h3><div class="service-duration">60 minutes</div><p class="service-desc">A complete reset for warm-weather scalps. Everything your scalp and hair need after a summer in the high desert: mineral buildup, chlorine, dulling metals, UV damage, and heat stress, all in one ritual.</p><ul style="margin:1rem 0 1rem 1.5rem;padding:0;color:var(--muted);font-size:0.88rem;line-height:1.6;"><li>Cooling eye mask for a full sensory release</li><li>Minty cooling shampoo that awakens the scalp</li><li>Summer Detox Clarifying Service removes buildup, mineral deposits &amp; chlorine</li><li>Fresh Activation Vitamin C draws out dulling metals, restores shine &amp; color</li><li>R+CO Suncatcher provides UV protection, pollution defense &amp; frizz control</li></ul><div class="service-price">$125</div></div>
         <div class="service-card"><h3>Signature Ritual</h3><div class="service-duration">60 minutes</div><p class="service-desc">A personalized consultation &amp; scalp assessment, grounding dry massage, warm oil therapy, double cleanse, nourishing conditioning mask, extended scalp massage, cuticle-sealing rinse, careful detangling, and lightweight finishing products.</p><p class="service-desc">This core ritual is the foundation of every Liora experience and is included in all extended treatments.</p><p class="service-note">Non-iron Style/Blow Out enhancement recommended for finished look.</p><div class="service-price">$130</div></div>
-        <div class="service-card"><h3>Illumination Ritual</h3><div class="service-duration">75 minutes</div><p class="service-desc">All elements of our Signature Ritual, with additional time devoted to deeper massage.</p><p class="service-desc">This elevated experience allows the body to fully settle into relaxation, enhancing circulation, scalp health, and overall restoration through prolonged, intentional touch.</p><p class="service-note">Non-iron Style/Blow Out enhancement recommended for finished look.</p><div class="service-price">$150</div></div>
-        <div class="service-card"><h3>Liora Luminary Ritual</h3><div class="service-duration">90 minutes<br>Illumination Ritual + Signature Mini Facial</div><p class="service-desc">Our most indulgent Scalp to Soul experience. This ritual includes all elements of the Illumination Ritual, followed by a restorative mini facial designed to calm, sculpt, and illuminate the complexion.</p><p class="service-desc">The facial experience includes a proprietary oil cleanse, custom facial mask, sculpting facial massage, Cryo therapy and Lymphatic Stimulation Therapy   creating harmony between scalp, skin, and nervous system.</p><p class="service-note">Non-iron Style/Blow Out enhancement recommended for finished look.</p><div class="service-price">$199</div></div>
+        <div class="service-card"><div class="label" style="margin-bottom:0.4rem;font-size:0.7rem;">NEWLY ENHANCED</div><h3>Illumination Ritual</h3><div class="service-duration">75 minutes</div><p class="service-desc">All elements of our Signature Ritual, with additional time devoted to deeper massage.</p><p class="service-desc">This elevated experience allows the body to fully settle into relaxation, enhancing circulation, scalp health, and overall restoration through prolonged, intentional touch.</p><p class="service-desc"><strong>Now including hot stone massage and foot &amp; calf massage.</strong></p><p class="service-note">Non-iron Style/Blow Out enhancement recommended for finished look.</p><div class="service-price">$140</div></div>
+        <div class="service-card"><h3>Liora Luminary Ritual</h3><div class="service-duration">90 minutes<br>Illumination Ritual + Signature Mini Facial</div><p class="service-desc">Our most indulgent Scalp to Soul experience. This ritual includes all elements of the Illumination Ritual, followed by a restorative mini facial designed to calm, sculpt, and illuminate the complexion.</p><p class="service-desc">The facial experience includes a proprietary oil cleanse, custom facial mask, sculpting facial massage, Cryo therapy and Lymphatic Stimulation Therapy   creating harmony between scalp, skin, and nervous system.</p><p class="service-note">Non-iron Style/Blow Out enhancement recommended for finished look.</p><div class="service-price">$170</div></div>
         <!-- Radiance Ritual — commented out, re-enable when ready
         <div class="service-card"><h3>Radiance Ritual</h3><div class="service-duration">90 minutes</div><p class="service-desc">Our most immersive relaxation-focused ritual   all components of the Signature Ritual, with significantly extended massage sequences, and unhurried transitions designed to promote deep nervous-system reset and complete restoration.</p><p class="service-note">Non-iron Style/Blow Out enhancement recommended for finished look.</p><div class="service-price">$205</div></div>
         -->
-        <div class="service-card"><h3>Renewal Growth Ritual</h3><div class="service-duration">90 minutes</div><p class="service-desc">A results-driven treatment to support scalp vitality and healthy hair growth. Incorporates growth-focused elixirs, high-frequency comb therapy, targeted massage, and red-light LED therapy to stimulate circulation and awaken the scalp.</p><p class="service-desc">Ideal for clients experiencing thinning, shedding, or compromised scalp health.</p><p class="service-note">Professional Non-iron/Blow Out included in service.</p><div class="service-price">$225</div></div>
+        <div class="service-card"><h3>Renewal Growth Ritual</h3><div class="service-duration">90 minutes</div><p class="service-desc">A results-driven treatment to support scalp vitality and healthy hair growth. Incorporates growth-focused elixirs, high-frequency comb therapy, targeted massage, and red-light LED therapy to stimulate circulation and awaken the scalp.</p><p class="service-desc">Ideal for clients experiencing thinning, shedding, or compromised scalp health.</p><p class="service-note">Professional Non-iron/Blow Out included in service.</p><div class="service-price">$199</div></div>
         <!-- Stillness Ritual — commented out, re-enable when ready
         <div class="service-card"><h3>Stillness Ritual</h3><div class="service-duration">45 minutes · Dry Head Spa</div><p class="service-desc">A waterless, deeply nurturing experience focused entirely on relaxation and nervous-system restoration. Features therapeutic dry scalp massage, warm oil application to the scalp, neck, shoulders, chest, and hands, and gentle tension-release techniques.</p><p class="service-note">No water. No washing. Pure, intentional care.</p><div class="service-price">$110</div></div>
         -->
-        <div class="service-card"><h3>The Liora Reset Blowout</h3><div class="service-duration">Blowout Service</div><p class="service-desc">A grounding, results-driven experience designed to reset both your scalp and your state of mind.</p><p class="service-desc">Begins with a tension-relieving dry scalp massage to stimulate circulation and release buildup, followed by a double cleanse to deeply purify and rebalance the scalp. A nourishing conditioning mask restores softness, hydration, and shine.</p><p class="service-desc">Finished with a full round brush blowout, leaving your hair smooth, polished, and effortlessly styled.</p><p class="service-note">Perfect for those looking for more than just a blowout — this is your reset.</p><div class="service-price">$90</div></div>
+        <div class="service-card"><h3>The Liora Reset Blowout</h3><div class="service-duration">Blowout Service</div><p class="service-desc">A grounding, results-driven experience designed to reset both your scalp and your state of mind.</p><p class="service-desc">Begins with a tension-relieving dry scalp massage to stimulate circulation and release buildup, followed by a double cleanse to deeply purify and rebalance the scalp. A nourishing conditioning mask restores softness, hydration, and shine.</p><p class="service-desc">Finished with a full round brush blowout, leaving your hair smooth, polished, and effortlessly styled.</p><p class="service-note">Perfect for those looking for more than just a blowout — this is your reset.</p><div class="service-price">$80</div></div>
         <div class="service-card service-card--addons"><h3>Enhancements</h3><div class="service-duration">Add-On Services</div><p class="service-desc" style="margin-bottom:0.8rem;">Curated add-ons to address specific scalp and hair concerns. May be added to any wet head spa service.</p><ul class="addon-list"><li><span>Extensions Handling</span><span>+$25</span></li><li><span>Extra-Long or Dense Hair</span><span>+$15</span></li><li><span>Hard Water Detox Treatment</span><span>+$20</span></li><li><span>Blonde Brightening Treatment</span><span>+$20</span></li><li><span>Repair &amp; Strengthening Treatment</span><span>+$20</span></li><li><span>Scalp Wellness Crystal Treatment</span><span>+$20</span></li><li><span>No-Iron Style / Blow Out</span><span>+$30</span></li></ul></div>
       </div>
 
       <div style="text-align:center;margin-top:2.5rem;padding:3rem 2rem;border-top:1px solid var(--border);border-bottom:1px solid var(--border)">
 
         <p style="font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,4vw,3rem);font-style:italic;color:var(--brown);letter-spacing:0.02em;margin:0 0 0.5rem;line-height:1.2">Add a <span style="color:var(--gold)">Crown Glow<br>Facial</span> to any ritual</p>
-        <p style="font-family:'Jost',sans-serif;font-size:0.8rem;color:var(--muted);letter-spacing:0.12em;text-transform:uppercase;margin:0 0 1rem">30 min &nbsp;&middot;&nbsp; +$50</p>
+        <p style="font-family:'Jost',sans-serif;font-size:0.8rem;color:var(--muted);letter-spacing:0.12em;text-transform:uppercase;margin:0 0 1rem">+$40</p>
         <p style="font-size:0.88rem;color:var(--muted);max-width:520px;margin:0 auto;line-height:1.7">Proprietary oil cleanse, custom facial mask, sculpting facial massage, Cryo therapy &amp; Lymphatic Stimulation Therapy.</p>
       </div>
 
@@ -855,83 +858,72 @@
       <div class="promotions-grid fade-in">
         <div class="promotion-card">
           <div class="promotion-header">
-            <div class="label" style="color:var(--gold-lt);letter-spacing:0.15em;">AUGUST MEMBERSHIP SPECIAL</div>
+            <div class="label" style="color:var(--gold-lt);letter-spacing:0.15em;">SEPTEMBER MEMBERSHIP SPECIAL</div>
             <h2 style="font-family:'Cormorant Garamond',serif;font-size:clamp(2.5rem,5vw,3.5rem);font-weight:400;font-style:italic;color:var(--white);margin:0.5rem 0 0;line-height:1.1">Join This Month</h2>
             <p style="font-family:'Cormorant Garamond',serif;font-size:1.2rem;color:var(--gold-lt);font-weight:300;margin-top:0.8rem">Consistency is the ritual</p>
           </div>
           <div class="promotion-content">
             <div class="promo-badge">$95/MONTH</div>
-            <p style="font-size:0.95rem;color:var(--brown);line-height:1.7;margin-bottom:1.5rem">For the month of August, join our Ritual Membership for just $95 a month. Consistent scalp care is the secret to healthy growth and beautiful hair, and membership makes it easy to stay on track.</p>
+            <p style="font-size:0.95rem;color:var(--brown);line-height:1.7;margin-bottom:1.5rem">For the month of September, join our Ritual Membership for just $95 a month. Consistent scalp care is the secret to healthy growth and beautiful hair, and membership makes it easy to stay on track.</p>
             <ul style="margin:0;padding:0 0 0 1.5rem;color:var(--brown);font-size:0.88rem;line-height:1.8;">
               <li>One 60-minute Signature Ritual every month</li>
               <li>Priority booking</li>
               <li>10% off enhancements and products</li>
               <li>Complimentary upgrade to the 75-minute Illumination Ritual during your birthday month</li>
             </ul>
-            <div style="text-align:center;margin-top:auto;padding-top:2rem;"><a href="https://clients.mangomint.com/360354/memberships" target="_blank" rel="noopener" class="btn-primary" style="display:inline-block">Join Now</a></div>
+            <div style="text-align:left;margin-top:auto;padding-top:2rem;"><a href="https://clients.mangomint.com/360354/memberships" target="_blank" rel="noopener" class="btn-primary" style="display:inline-block">Join Now</a></div>
           </div>
         </div>
 
         <div class="promotion-card">
           <div class="promotion-header">
-            <div class="label" style="color:var(--gold-lt);letter-spacing:0.15em;">NEW CLIENT EXCLUSIVE</div>
-            <h2 style="font-family:'Cormorant Garamond',serif;font-size:clamp(2.5rem,5vw,3.5rem);font-weight:400;font-style:italic;color:var(--white);margin:0.5rem 0 0;line-height:1.1">Signature Ritual</h2>
-            <p style="font-family:'Cormorant Garamond',serif;font-size:1.2rem;color:var(--gold-lt);font-weight:300;margin-top:0.8rem">The foundation of every Liora experience</p>
+            <div class="label" style="color:var(--gold-lt);letter-spacing:0.15em;">ENHANCEMENT</div>
+            <h2 style="font-family:'Cormorant Garamond',serif;font-size:clamp(2.5rem,5vw,3.5rem);font-weight:400;font-style:italic;color:var(--white);margin:0.5rem 0 0;line-height:1.1">Harvest Glow Facial</h2>
+            <p style="font-family:'Cormorant Garamond',serif;font-size:1.2rem;color:var(--gold-lt);font-weight:300;margin-top:0.8rem">Enhance any head spa ritual</p>
           </div>
           <div class="promotion-content">
-            <div class="promo-badge">$105 <span style="font-weight:400;opacity:0.75">(normally $130)</span></div>
-            <p style="font-size:0.95rem;color:var(--brown);line-height:1.7">A personalized consultation and scalp assessment, grounding dry massage, warm oil therapy, double cleanse, nourishing conditioning mask, extended scalp massage, and lightweight finishing products.</p>
-            <div style="text-align:center;margin-top:auto;padding-top:2rem;"><a href="#" onclick="showBookingModal(event,'promotions')" class="btn-primary" style="display:inline-block">Book Now</a></div>
+            <div class="promo-badge">+$40</div>
+            <p style="font-size:0.95rem;color:var(--brown);line-height:1.7">Proprietary double cleanse, our Pumpkin Perfecting Mask, sculpting facial massage, Cryo therapy &amp; Lymphatic Stimulation Therapy.</p>
+            <div style="text-align:left;margin-top:auto;padding-top:2rem;"><a href="#" onclick="showBookingModal(event,'promotions')" class="btn-primary" style="display:inline-block">Book Now</a></div>
           </div>
         </div>
 
         <div class="promotion-card">
           <div class="promotion-header">
-            <div class="label" style="color:var(--gold-lt);letter-spacing:0.15em;">ADD ON ANY RITUAL</div>
-            <h2 style="font-family:'Cormorant Garamond',serif;font-size:clamp(2.5rem,5vw,3.5rem);font-weight:400;font-style:italic;color:var(--white);margin:0.5rem 0 0;line-height:1.1">No-Iron Blow Out</h2>
-            <p style="font-family:'Cormorant Garamond',serif;font-size:1.2rem;color:var(--gold-lt);font-weight:300;margin-top:0.8rem">A smooth, polished finish, no heat required</p>
+            <div class="label" style="color:var(--gold-lt);letter-spacing:0.15em;">NEWLY ENHANCED</div>
+            <h2 style="font-family:'Cormorant Garamond',serif;font-size:clamp(2.5rem,5vw,3.5rem);font-weight:400;font-style:italic;color:var(--white);margin:0.5rem 0 0;line-height:1.1">Illumination Ritual</h2>
+            <p style="font-family:'Cormorant Garamond',serif;font-size:1.2rem;color:var(--gold-lt);font-weight:300;margin-top:0.8rem">Now featuring hot stone, foot &amp; calf massage</p>
           </div>
           <div class="promotion-content">
-            <div class="promo-badge">$15 <span style="font-weight:400;opacity:0.75">(normally $30)</span></div>
-            <p style="font-size:0.95rem;color:var(--brown);line-height:1.7">Finish your ritual with a full round brush blow out for a smooth, polished style that lasts.</p>
-            <div style="text-align:center;margin-top:auto;padding-top:2rem;"><a href="#" onclick="showBookingModal(event,'promotions')" class="btn-primary" style="display:inline-block">Book Now</a></div>
-          </div>
-        </div>
-
-        <div class="promotion-card">
-          <div class="promotion-header">
-            <div class="label" style="color:var(--gold-lt);letter-spacing:0.15em;">EXTENDED THROUGH AUGUST</div>
-            <h2 style="font-family:'Cormorant Garamond',serif;font-size:clamp(2.5rem,5vw,3.5rem);font-weight:400;font-style:italic;color:var(--white);margin:0.5rem 0 0;line-height:1.1">Summer Refresh Ritual</h2>
-            <p style="font-family:'Cormorant Garamond',serif;font-size:1.2rem;color:var(--gold-lt);font-weight:300;margin-top:0.8rem">A complete reset for warm-weather scalps</p>
-          </div>
-          <div class="promotion-content">
-            <div class="promo-badge">$125</div>
+            <div class="promo-badge">$140</div>
             <ul style="margin:0;padding:0 0 0 1.5rem;color:var(--brown);font-size:0.88rem;line-height:1.8;">
-              <li>Cooling eye mask for a full sensory release</li>
-              <li>Minty cooling shampoo that awakens the scalp</li>
-              <li>Summer Detox Clarifying Service removes buildup, mineral deposits &amp; chlorine</li>
-              <li>Fresh Activation Vitamin C draws out dulling metals, restores shine &amp; color</li>
-              <li>R+CO Suncatcher provides UV protection, pollution defense &amp; frizz control</li>
+              <li>All elements of our Signature Ritual, with additional time devoted to deeper massage</li>
+              <li>This elevated experience allows the body to fully settle into relaxation, enhancing circulation, scalp health, and overall restoration</li>
+              <li>Now including: hot stone massage and foot &amp; calf massage</li>
             </ul>
-            <div style="text-align:center;margin-top:auto;padding-top:2rem;"><a href="#" onclick="showBookingModal(event,'promotions')" class="btn-primary" style="display:inline-block">Book Now</a></div>
+            <div style="text-align:left;margin-top:auto;padding-top:2rem;"><a href="#" onclick="showBookingModal(event,'promotions')" class="btn-primary" style="display:inline-block">Book Now</a></div>
           </div>
         </div>
 
-        <div class="promotion-card">
+        <div class="promotion-card promotion-card--wide">
           <div class="promotion-header">
             <div class="label" style="color:var(--gold-lt);letter-spacing:0.15em;">ALWAYS AVAILABLE</div>
-            <h2 style="font-family:'Cormorant Garamond',serif;font-size:clamp(2.5rem,5vw,3.5rem);font-weight:400;font-style:italic;color:var(--white);margin:0.5rem 0 0;line-height:1.1">The Together Promo</h2>
-            <p style="font-family:'Cormorant Garamond',serif;font-size:1.2rem;color:var(--gold-lt);font-weight:300;margin-top:0.8rem">Some rituals are better shared</p>
+            <h2 style="font-family:'Cormorant Garamond',serif;font-size:clamp(2.5rem,5vw,3.5rem);font-weight:400;font-style:italic;color:var(--white);margin:0.5rem 0 0;line-height:1.1">What You Can Always Count On</h2>
+            <p style="font-family:'Cormorant Garamond',serif;font-size:1.2rem;color:var(--gold-lt);font-weight:300;margin-top:0.8rem">No expiration date, no fine print</p>
           </div>
-          <div class="promotion-content">
-            <div class="promo-badge">BOGO 50% OFF</div>
-            <p style="font-size:0.95rem;color:var(--brown);line-height:1.7;margin-bottom:1.5rem">This one isn't going anywhere. Bring the person who carries as much as you do. Rest is better shared.</p>
-            <ul style="margin:0;padding:0 0 0 1.5rem;color:var(--brown);font-size:0.88rem;line-height:1.8;">
-              <li>Book any service for two</li>
-              <li>Second ritual is 50% off</li>
-              <li>Always available, no expiration date</li>
-            </ul>
-            <div style="text-align:center;margin-top:auto;padding-top:2rem;"><a href="#" onclick="showBookingModal(event,'promotions')" class="btn-primary" style="display:inline-block">Book Now</a></div>
+          <div class="promotion-content" style="display:grid;grid-template-columns:repeat(auto-fit, minmax(min(240px, 100%), 1fr));gap:2.5rem;">
+            <div style="display:flex;flex-direction:column;">
+              <div class="promo-badge">BOGO 50% OFF</div>
+              <p style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.1rem;color:var(--brown);margin:0 0 0.4rem">The Together Promo</p>
+              <p style="font-size:0.95rem;color:var(--brown);line-height:1.7">Bring the person who carries as much as you do. Book any service for two and the second ritual is 50% off. Rest is better shared.</p>
+              <div style="text-align:left;margin-top:auto;padding-top:2rem;"><a href="#" onclick="showBookingModal(event,'promotions')" class="btn-primary" style="display:inline-block">Book Now</a></div>
+            </div>
+            <div style="display:flex;flex-direction:column;">
+              <div class="promo-badge">20% OFF</div>
+              <p style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.1rem;color:var(--brown);margin:0 0 0.4rem">The Midweek Reset</p>
+              <p style="font-size:0.95rem;color:var(--brown);line-height:1.7">20% off every Signature ritual, every Wednesday and Thursday.</p>
+              <div style="text-align:left;margin-top:auto;padding-top:2rem;"><a href="#" onclick="showBookingModal(event,'promotions')" class="btn-primary" style="display:inline-block">Book Now</a></div>
+            </div>
           </div>
         </div>
       </div>
@@ -995,22 +987,6 @@
             <li><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7L5.5 10.5L12 3.5" stroke="#C9A96E" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>One-month rollover if unused</li>
           </ul>
           <a href="https://clients.mangomint.com/360354/memberships" target="_blank" rel="noopener" class="btn-outline membership-btn" onclick="if(typeof gtag!=='undefined')gtag('event','membership_click',{tier:'illumination'})">Become a Member</a>
-        </div>
-        <div class="membership-card">
-          <div class="membership-header">
-            <div class="label" style="color:var(--gold)">Monthly Membership</div>
-            <h3>Renewal Growth Membership</h3>
-            <div class="membership-price">$200 <span>/ month</span></div>
-          </div>
-          <ul class="membership-perks">
-            <li><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7L5.5 10.5L12 3.5" stroke="#C9A96E" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>Designed for guests focused on long-term scalp health and hair growth</li>
-            <li><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7L5.5 10.5L12 3.5" stroke="#C9A96E" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>One 90-Minute Renewal Growth Ritual per month</li>
-            <li><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7L5.5 10.5L12 3.5" stroke="#C9A96E" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>Priority booking</li>
-            <li><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7L5.5 10.5L12 3.5" stroke="#C9A96E" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>10% off enhancements</li>
-            <li><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7L5.5 10.5L12 3.5" stroke="#C9A96E" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>Exclusive seasonal offerings</li>
-            <li><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7L5.5 10.5L12 3.5" stroke="#C9A96E" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>One-month rollover if unused</li>
-          </ul>
-          <a href="https://clients.mangomint.com/360354/memberships" target="_blank" rel="noopener" class="btn-outline membership-btn" onclick="if(typeof gtag!=='undefined')gtag('event','membership_click',{tier:'renewal_growth'})">Become a Member</a>
         </div>
         <!-- Founding Ritual Membership — commented out, re-enable if needed
         <div class="membership-card membership-card--founding">
@@ -1242,8 +1218,8 @@
             <select id="service" name="MMERGE6">
               <option value="">Select a service…</option>
               <option>Signature Ritual   $140</option>
-              <option>Illumination Ritual   $170</option>
-              <option>Renewal Growth Ritual   $230</option>
+              <option>Illumination Ritual   $140</option>
+              <option>Renewal Growth Ritual   $199</option>
               <option>Stillness Ritual (Dry)   $110</option>
               <option>Enhancement / Add-On only</option>
               <option>Not sure yet   help me choose</option>
