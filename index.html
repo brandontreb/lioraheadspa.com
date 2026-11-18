@@ -287,7 +287,6 @@
        SERVICES
     ══════════════════════════════════════════════ */
     #services { background: var(--cream); }
-    #promotions { padding-top: 1rem; }
     .section-header { text-align: center; margin-bottom: 4rem; }
     .section-header h2 { font-size: clamp(2.2rem, 4vw, 3.2rem); color: var(--brown); }
 
@@ -342,64 +341,6 @@
     .addon-list li span:last-child { font-family:'Cormorant Garamond',serif;font-size:1.1rem;color:var(--gold); }
     .service-card--addons { background:var(--ivory); }
     .service-card--addons:hover { background:var(--cream); }
-
-    /* ═══════════════════════════════════════════════
-       PROMOTIONS
-    ══════════════════════════════════════════════ */
-    .promotions-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(min(310px, 100%), 1fr));
-      gap: 3rem;
-    }
-    .promotion-card {
-      display: flex;
-      flex-direction: column;
-      overflow: hidden;
-      border-radius: 4px;
-    }
-    .promotion-header {
-      background: var(--brown);
-      color: var(--white);
-      padding: 3.5rem 2rem 2.5rem;
-      text-align: center;
-    }
-    .promotion-header .label {
-      font-size: 0.65rem;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      margin-bottom: 0.8rem;
-    }
-    .promotion-header h2 {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: clamp(2rem, 4vw, 2.8rem);
-      color: var(--white);
-      margin: 0.5rem 0 0;
-      line-height: 1.1;
-    }
-    .promotion-content {
-      background: var(--cream);
-      padding: 2.5rem 2rem;
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-    }
-    .promo-badge {
-      display: inline-block;
-      background: var(--gold);
-      color: var(--brown);
-      padding: 0.5rem 1.2rem;
-      border-radius: 20px;
-      font-size: 0.7rem;
-      font-weight: 500;
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-      margin-bottom: 1.5rem;
-      width: fit-content;
-    }
-    .promotion-card--wide { grid-column: span 2; }
-    @media (max-width: 700px) {
-      .promotion-card--wide { grid-column: span 1; }
-    }
 
     /* ═══════════════════════════════════════════════
        ABOUT
@@ -918,7 +859,6 @@
         </a>
         <ul class="nav-links">
           <li><a href="#services">Services</a></li>
-          <li><a href="#promotions">Promotions</a></li>
           <li><a href="#membership">Membership</a></li>
           <li><a href="#about">About</a></li>
           <li><a href="#faq">FAQ</a></li>
@@ -933,7 +873,6 @@
     </div>
     <div class="mobile-menu" id="mobileMenu">
       <a href="#services" onclick="closeMobile()">Services</a>
-      <a href="#promotions" onclick="closeMobile()">Promotions</a>
       <a href="#membership" onclick="closeMobile()">Membership</a>
       <a href="#about" onclick="closeMobile()">About</a>
       <a href="#faq" onclick="closeMobile()">FAQ</a>
@@ -1014,89 +953,6 @@
     </div>
   </section>
 
-  <!-- ═══════════ PROMOTIONS ═══════════ -->
-  <section id="promotions" class="section">
-    <div class="container">
-      <div class="section-header fade-in">
-        <div class="label">This Month's Offers</div>
-        <div class="gold-line"><svg width="8" height="8" viewBox="0 0 8 8"><circle cx="4" cy="4" r="3" stroke="#C9A96E" stroke-width="1" fill="none"/></svg></div>
-        <h2 style="margin-top:1.2rem">Limited Time Promotions</h2>
-      </div>
-      <div class="promotions-grid fade-in">
-        <div class="promotion-card">
-          <div class="promotion-header">
-            <div class="label" style="color:var(--gold-lt);letter-spacing:0.15em;">SEPTEMBER MEMBERSHIP SPECIAL</div>
-            <h2 style="font-family:'Cormorant Garamond',serif;font-size:clamp(2.5rem,5vw,3.5rem);font-weight:400;font-style:italic;color:var(--white);margin:0.5rem 0 0;line-height:1.1">Join This Month</h2>
-            <p style="font-family:'Cormorant Garamond',serif;font-size:1.2rem;color:var(--gold-lt);font-weight:300;margin-top:0.8rem">Consistency is the ritual</p>
-          </div>
-          <div class="promotion-content">
-            <div class="promo-badge">$95/MONTH</div>
-            <p style="font-size:0.95rem;color:var(--brown);line-height:1.7;margin-bottom:1.5rem">For the month of September, join our Ritual Membership for just $95 a month. Consistent scalp care is the secret to healthy growth and beautiful hair, and membership makes it easy to stay on track.</p>
-            <ul style="margin:0;padding:0 0 0 1.5rem;color:var(--brown);font-size:0.88rem;line-height:1.8;">
-              <li>One 60-minute Signature Ritual every month</li>
-              <li>Priority booking</li>
-              <li>10% off enhancements and products</li>
-              <li>Complimentary upgrade to the 75-minute Illumination Ritual during your birthday month</li>
-            </ul>
-            <div style="text-align:left;margin-top:auto;padding-top:2rem;"><a href="https://clients.mangomint.com/360354/memberships" target="_blank" rel="noopener" class="btn-primary" style="display:inline-block">Join Now</a></div>
-          </div>
-        </div>
-
-        <div class="promotion-card">
-          <div class="promotion-header">
-            <div class="label" style="color:var(--gold-lt);letter-spacing:0.15em;">ENHANCEMENT</div>
-            <h2 style="font-family:'Cormorant Garamond',serif;font-size:clamp(2.5rem,5vw,3.5rem);font-weight:400;font-style:italic;color:var(--white);margin:0.5rem 0 0;line-height:1.1">Harvest Glow Facial</h2>
-            <p style="font-family:'Cormorant Garamond',serif;font-size:1.2rem;color:var(--gold-lt);font-weight:300;margin-top:0.8rem">Enhance any head spa ritual</p>
-          </div>
-          <div class="promotion-content">
-            <div class="promo-badge">+$40</div>
-            <p style="font-size:0.95rem;color:var(--brown);line-height:1.7">Proprietary double cleanse, our Pumpkin Perfecting Mask, sculpting facial massage, Cryo therapy &amp; Lymphatic Stimulation Therapy.</p>
-            <div style="text-align:left;margin-top:auto;padding-top:2rem;"><a href="#" onclick="showBookingModal(event,'promotions')" class="btn-primary" style="display:inline-block">Book Now</a></div>
-          </div>
-        </div>
-
-        <div class="promotion-card">
-          <div class="promotion-header">
-            <div class="label" style="color:var(--gold-lt);letter-spacing:0.15em;">NEWLY ENHANCED</div>
-            <h2 style="font-family:'Cormorant Garamond',serif;font-size:clamp(2.5rem,5vw,3.5rem);font-weight:400;font-style:italic;color:var(--white);margin:0.5rem 0 0;line-height:1.1">Illumination Ritual</h2>
-            <p style="font-family:'Cormorant Garamond',serif;font-size:1.2rem;color:var(--gold-lt);font-weight:300;margin-top:0.8rem">Now featuring hot stone, foot &amp; calf massage</p>
-          </div>
-          <div class="promotion-content">
-            <div class="promo-badge">$140</div>
-            <ul style="margin:0;padding:0 0 0 1.5rem;color:var(--brown);font-size:0.88rem;line-height:1.8;">
-              <li>All elements of our Signature Ritual, with additional time devoted to deeper massage</li>
-              <li>This elevated experience allows the body to fully settle into relaxation, enhancing circulation, scalp health, and overall restoration</li>
-              <li>Now including: hot stone massage and foot &amp; calf massage</li>
-            </ul>
-            <div style="text-align:left;margin-top:auto;padding-top:2rem;"><a href="#" onclick="showBookingModal(event,'promotions')" class="btn-primary" style="display:inline-block">Book Now</a></div>
-          </div>
-        </div>
-
-        <div class="promotion-card promotion-card--wide">
-          <div class="promotion-header">
-            <div class="label" style="color:var(--gold-lt);letter-spacing:0.15em;">ALWAYS AVAILABLE</div>
-            <h2 style="font-family:'Cormorant Garamond',serif;font-size:clamp(2.5rem,5vw,3.5rem);font-weight:400;font-style:italic;color:var(--white);margin:0.5rem 0 0;line-height:1.1">What You Can Always Count On</h2>
-            <p style="font-family:'Cormorant Garamond',serif;font-size:1.2rem;color:var(--gold-lt);font-weight:300;margin-top:0.8rem">No expiration date, no fine print</p>
-          </div>
-          <div class="promotion-content" style="display:grid;grid-template-columns:repeat(auto-fit, minmax(min(240px, 100%), 1fr));gap:2.5rem;">
-            <div style="display:flex;flex-direction:column;">
-              <div class="promo-badge">BOGO 50% OFF</div>
-              <p style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.1rem;color:var(--brown);margin:0 0 0.4rem">The Together Promo</p>
-              <p style="font-size:0.95rem;color:var(--brown);line-height:1.7">Bring the person who carries as much as you do. Book any service for two and the second ritual is 50% off. Rest is better shared.</p>
-              <div style="text-align:left;margin-top:auto;padding-top:2rem;"><a href="#" onclick="showBookingModal(event,'promotions')" class="btn-primary" style="display:inline-block">Book Now</a></div>
-            </div>
-            <div style="display:flex;flex-direction:column;">
-              <div class="promo-badge">20% OFF</div>
-              <p style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.1rem;color:var(--brown);margin:0 0 0.4rem">The Midweek Reset</p>
-              <p style="font-size:0.95rem;color:var(--brown);line-height:1.7">20% off every Signature ritual, every Wednesday and Thursday.</p>
-              <div style="text-align:left;margin-top:auto;padding-top:2rem;"><a href="#" onclick="showBookingModal(event,'promotions')" class="btn-primary" style="display:inline-block">Book Now</a></div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <!-- ═══════════ ABOUT ═══════════ -->
   <section id="about" class="section">
     <div class="container">
@@ -1142,8 +998,7 @@
           <div class="membership-header">
             <div class="label" style="color:var(--gold)">Monthly Membership</div>
             <h3>Liora Ritual Membership</h3>
-            <div class="membership-price">$95 <span>/ month</span></div>
-            <p class="membership-rate-note">Limited time price, regularly $110</p>
+            <div class="membership-price">$99 <span>/ month</span></div>
           </div>
           <ul class="membership-perks">
             <li><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7L5.5 10.5L12 3.5" stroke="#C9A96E" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>One 60-Minute Signature Ritual per month</li>
